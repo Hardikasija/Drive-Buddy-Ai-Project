@@ -1,0 +1,29 @@
+{
+  "model_name": "LogisticRegression",
+  "training_samples": 360,
+  "test_samples": 92,
+  "cv_f1_mean": 0.5913245409180734,
+  "cv_f1_std": 0.043837662403900045,
+  "test_accuracy": 0.5978260869565217,
+  "test_precision": 0.5,
+  "test_recall": 0.5405405405405406,
+  "test_f1": 0.5194805194805194,
+  "test_roc_auc": 0.6299754299754301,
+  "test_pr_auc": 0.49749265194998976,
+  "strict_target_removal": true,
+  "text_column": "text_clean_strict",
+  "numeric_features": [
+    "likes",
+    "comments_count",
+    "n_tags",
+    "n_hashtags_in_caption",
+    "n_mentions",
+    "n_urls",
+    "n_emojis",
+    "caption_char_len",
+    "caption_word_len",
+    "is_video",
+    "has_location"
+  ],
+  "model_artifact": "models/final_model.joblib"
+}
