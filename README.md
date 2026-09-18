@@ -10,10 +10,8 @@ The supplied image folders are used only to establish labels (`images/1` = Pav B
 
 ```text
 DrivebuddyAI_PavBhaji/
-├── dataset/
-│   ├── images/0/
-│   ├── images/1/
-│   └── pavbhaji.json
+├── models/
+│   └── final_model.joblib
 ├── notebooks/
 │   └── DrivebuddyAI_PavBhaji_Challenge.ipynb
 ├── src/
@@ -28,9 +26,13 @@ DrivebuddyAI_PavBhaji/
 │   ├── predictions.csv
 │   ├── feature_importance.csv
 │   └── error_analysis.csv
+├── .gitignore
 ├── README.md
+├── app.py
+├── Hardik.ipynb
 └── requirements.txt
 ```
+Note: The raw challenge dataset is not included in this public repository.
 
 ## Setup
 
@@ -85,11 +87,19 @@ The exact values are stored in `outputs/cv_model_comparison.csv` and `outputs/mo
 
 The project also includes a local Streamlit demo that loads the **same fitted pipeline** saved by the training script. It does not retrain the model and does not use images or computer vision.
 
-First generate the model artifact with the training pipeline:
+## Streamlit Demo
 
-```bash
-python src/DrivebuddyAI_PavBhaji_Challenge.py --data-dir <path_to_dataset> --output-dir outputs
-```
+The project includes a local Streamlit demo that uses the saved trained pipeline.
+
+Run:
+
+streamlit run app.py
+
+The app loads:
+- models/final_model.joblib
+- outputs/model_metadata.json
+
+The raw dataset is not required to run the Streamlit demo.
 
 Then launch the app:
 
